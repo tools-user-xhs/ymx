@@ -1,530 +1,1462 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>亚马逊运营全流程SOP - 新手百科全书</title>
-    <style>
-        :root {
-            --primary: #FF7A00;         /* 活力橙 */
-            --primary-light: #FFE0B2;
-            --secondary: #0F4C5C;       /* 稳重青蓝 */
-            --secondary-light: #E0F2F1;
-            --bg-color: #F4F7F9;        /* 极浅灰蓝背景 */
-            --card-bg: #FFFFFF;
-            --text-main: #1E293B;
-            --text-muted: #64748B;
-            
-            /* 标签颜色 */
-            --tag-blue-bg: #E3F2FD; --tag-blue-text: #1565C0;
-            --tag-green-bg: #E8F5E9; --tag-green-text: #2E7D32;
-            --tag-red-bg: #FFEBEE; --tag-red-text: #C62828;
-            --tag-yellow-bg: #FFF8E1; --tag-yellow-text: #F57F17;
-            --tag-purple-bg: #F3E5F5; --tag-purple-text: #6A1B9A;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>项目经历 · 出圈框架</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            margin: 0;
-            padding: 20px;
-            line-height: 1.6;
-        }
+    body {
+      background: #eef1f6;
+      min-height: 100vh;
+      padding: 2.5rem 1.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
 
-        header { text-align: center; margin-bottom: 30px; }
-        header h1 { color: var(--secondary); font-size: 28px; font-weight: 800; letter-spacing: 1px; margin-bottom: 10px; }
-        header p { color: var(--text-muted); font-size: 15px; }
+    .app {
+      max-width: 1240px;
+      width: 100%;
+      background: #ffffff;
+      border-radius: 1.25rem;
+      padding: 0;
+      box-shadow: 0 8px 32px rgba(0, 20, 50, 0.08), 0 1px 3px rgba(0, 20, 50, 0.04);
+      border: 1px solid #dde3ec;
+      overflow: hidden;
+    }
 
-        /* 顶部选择器 */
-        .selector-container {
-            max-width: 900px; margin: 0 auto 30px auto;
-            background: var(--card-bg); padding: 20px;
-            border-radius: 16px;
-            box-shadow: 0 10px 25px rgba(15, 76, 92, 0.05);
-            text-align: center; border-top: 4px solid var(--primary);
-        }
-        select {
-            width: 80%; padding: 14px 20px; font-size: 16px;
-            border: 2px solid var(--secondary-light); border-radius: 10px;
-            background-color: #fff; color: var(--secondary); font-weight: 600;
-            cursor: pointer; outline: none; appearance: none;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%230F4C5C' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
-            background-repeat: no-repeat; background-position: right 15px center; background-size: 18px;
-            transition: all 0.3s ease;
-        }
-        select:hover, select:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(255, 122, 0, 0.1); }
+    .project-bar {
+      background: #1a2b4c;
+      padding: 1.3rem 2.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      border-bottom: 3px solid #2d5b9e;
+    }
 
-        /* 内容区域 */
-        .content-area { max-width: 900px; margin: 0 auto; }
-        .module-title {
-            font-size: 22px; color: var(--secondary); font-weight: 700;
-            margin-bottom: 20px; padding-bottom: 10px;
-            border-bottom: 2px solid var(--secondary-light);
-            display: flex; align-items: center;
-        }
-        .module-title::before {
-            content: ""; display: inline-block; width: 6px; height: 24px;
-            background: var(--primary); margin-right: 12px; border-radius: 4px;
-        }
+    .project-bar-left {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
 
-        /* 大标题折叠容器 */
-        .accordion-item {
-            background: var(--card-bg); border-radius: 12px;
-            margin-bottom: 15px; box-shadow: 0 2px 10px rgba(0,0,0,0.02);
-            border: 1px solid #eef2f5; overflow: hidden; transition: all 0.3s ease;
-        }
-        .accordion-item:hover { box-shadow: 0 5px 15px rgba(15, 76, 92, 0.06); }
+    .project-badge {
+      width: 38px;
+      height: 38px;
+      border-radius: 8px;
+      background: #2d5b9e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
 
-        /* 大标题栏 */
-        .accordion-header {
-            background: #ffffff; color: var(--secondary); padding: 18px 20px;
-            cursor: pointer; display: flex; justify-content: space-between;
-            align-items: center; font-weight: 700; font-size: 16px;
-            border-left: 4px solid transparent; transition: all 0.3s;
-        }
-        .accordion-header:hover { background: #FAFAFA; border-left-color: var(--primary); }
-        .accordion-header.active { border-left-color: var(--primary); background: #FFFDF9; color: var(--primary); }
-        .accordion-header .icon { font-size: 18px; transition: transform 0.3s ease; color: var(--secondary); }
-        .accordion-header.active .icon { transform: rotate(180deg); color: var(--primary); }
+    .project-bar h1 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: -0.01em;
+      margin: 0;
+      line-height: 1.3;
+    }
 
-        /* 展开内容区 */
-        .accordion-content {
-            display: none; padding: 20px; background: #FBFCFD;
-            border-top: 1px solid #eef2f5; animation: fadeIn 0.4s ease;
-        }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(-5px); } to { opacity: 1; transform: translateY(0); } }
+    .project-bar .project-meta {
+      font-size: 0.78rem;
+      color: #8ba3c7;
+      font-weight: 400;
+      margin-top: 0.1rem;
+    }
 
-        /* ====== 核心结构化：微卡片布局 ====== */
-        .micro-card {
-            background: #ffffff;
-            border: 1px solid #e9ecef;
-            border-radius: 8px;
-            padding: 14px 16px;
-            margin-bottom: 12px;
-            display: flex;
-            align-items: flex-start;
-            transition: all 0.2s ease;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.01);
-        }
-        .micro-card:hover {
-            border-color: var(--primary-light);
-            box-shadow: 0 3px 8px rgba(255, 122, 0, 0.06);
-        }
-        .micro-card:last-child { margin-bottom: 0; }
+    .project-bar-right {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
 
-        /* 结构化标签（关键词） */
-        .card-tag {
-            font-size: 12px;
-            font-weight: 700;
-            padding: 3px 8px;
-            border-radius: 4px;
-            margin-right: 12px;
-            white-space: nowrap;
-            flex-shrink: 0;
-            margin-top: 2px;
-        }
-        .tag-blue { background: var(--tag-blue-bg); color: var(--tag-blue-text); }
-        .tag-green { background: var(--tag-green-bg); color: var(--tag-green-text); }
-        .tag-red { background: var(--tag-red-bg); color: var(--tag-red-text); }
-        .tag-yellow { background: var(--tag-yellow-bg); color: var(--tag-yellow-text); }
-        .tag-purple { background: var(--tag-purple-bg); color: var(--tag-purple-text); }
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #22c55e;
+      display: inline-block;
+      box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.15);
+    }
 
-        /* 卡片正文 */
-        .card-text {
-            font-size: 14px;
-            color: var(--text-main);
-            line-height: 1.6;
-            flex-grow: 1;
-        }
-        .card-text strong {
-            color: var(--secondary);
-            font-weight: 600;
-        }
+    .status-text {
+      font-size: 0.78rem;
+      color: #8ba3c7;
+    }
 
-        /* 高亮样式（仅用于句子内强调） */
-        .highlight { background-color: #FFF3CD; padding: 2px 6px; border-radius: 4px; color: #856404; font-weight: 600; }
-        .highlight-red { background-color: #F8D7DA; color: #721C24; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
+    .collapse-all-btn {
+      background: #2d5b9e;
+      border: 1px solid #2d5b9e;
+      color: #ffffff;
+      padding: 0.45rem 1.1rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.78rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
 
-        @media (max-width: 600px) {
-            select { width: 100%; }
-            .accordion-header { font-size: 15px; padding: 15px; }
-            .accordion-content { padding: 15px; }
-            .micro-card { flex-direction: column; padding: 12px; }
-            .card-tag { margin-bottom: 6px; margin-right: 0; }
-        }
-    </style>
+    .collapse-all-btn:hover {
+      background: #244b82;
+      border-color: #244b82;
+    }
+
+    .content {
+      padding: 2rem 2.2rem 2.5rem;
+    }
+
+    .section-block {
+      margin-bottom: 1.5rem;
+      background: #ffffff;
+      border-radius: 0.875rem;
+      border: 1px solid #e4e9f0;
+      overflow: hidden;
+      box-shadow: 0 1px 2px rgba(0, 20, 50, 0.03);
+      transition: margin-bottom 0.2s ease;
+    }
+
+    .section-block.collapsed {
+      margin-bottom: 0.8rem;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 1.4rem;
+      background: #f8fafd;
+      border-bottom: 1px solid #e8ecf3;
+      position: relative;
+      cursor: pointer;
+      user-select: none;
+      transition: background 0.15s;
+    }
+
+    .section-header:hover {
+      background: #f1f5fa;
+    }
+
+    .section-block.collapsed .section-header {
+      border-bottom: none;
+    }
+
+    .section-header::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: #2d5b9e;
+    }
+
+    .section-header.stage-1::before { background: #2d5b9e; }
+    .section-header.stage-2::before { background: #3b7dd8; }
+    .section-header.stage-3::before { background: #1a2b4c; }
+
+    .section-num {
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: #ffffff;
+      flex-shrink: 0;
+    }
+
+    .num-1 { background: #2d5b9e; }
+    .num-2 { background: #3b7dd8; }
+    .num-3 { background: #1a2b4c; }
+
+    .section-title-wrap {
+      flex: 1;
+    }
+
+    .section-title {
+      font-size: 1.02rem;
+      font-weight: 700;
+      color: #1a2b4c;
+      letter-spacing: -0.01em;
+      line-height: 1.3;
+    }
+
+    .section-sub {
+      font-size: 0.78rem;
+      color: #7a8aa0;
+      font-weight: 400;
+      margin-top: 0.1rem;
+    }
+
+    .collapse-arrow {
+      color: #7a8aa0;
+      font-size: 0.85rem;
+      transition: transform 0.2s ease;
+      flex-shrink: 0;
+      margin-left: 0.5rem;
+    }
+
+    .section-block.collapsed .collapse-arrow {
+      transform: rotate(-90deg);
+    }
+
+    .section-body {
+      padding: 1.2rem 1.4rem 1.4rem;
+      max-height: 2000px;
+      opacity: 1;
+      transition: max-height 0.3s ease, opacity 0.2s ease, padding 0.2s ease;
+      overflow: hidden;
+    }
+
+    .section-block.collapsed .section-body {
+      max-height: 0;
+      opacity: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    .module-nav {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.8rem;
+    }
+
+    .main-dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .main-dropdown-btn {
+      background: #ffffff;
+      border: 1px solid #ccd6e3;
+      padding: 0.65rem 1.4rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: #1a2b4c;
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .main-dropdown-btn i.fa-chevron-down {
+      font-size: 0.65rem;
+      transition: transform 0.15s;
+      color: #7a8aa0;
+    }
+
+    .main-dropdown-btn.active i.fa-chevron-down {
+      transform: rotate(180deg);
+    }
+
+    .main-dropdown-btn:hover {
+      border-color: #2d5b9e;
+      background: #f8fafd;
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: calc(100% + 6px);
+      left: 0;
+      width: 440px;
+      max-width: 90vw;
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 0.5rem;
+      box-shadow: 0 12px 32px rgba(0, 20, 50, 0.14);
+      z-index: 100;
+      display: none;
+      border: 1px solid #e8ecf3;
+    }
+
+    .dropdown-menu.show {
+      display: block;
+      animation: fadeSlide 0.15s ease;
+    }
+
+    @keyframes fadeSlide {
+      from { opacity: 0; transform: translateY(-4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .menu-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+      padding: 0.65rem 0.8rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.12s;
+      border: none;
+      background: transparent;
+      width: 100%;
+      text-align: left;
+      font-family: inherit;
+      font-size: 0.88rem;
+    }
+
+    .menu-item:hover {
+      background: #f4f6fa;
+    }
+
+    .menu-item.active {
+      background: #eef3fa;
+    }
+
+    .menu-icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+      background: #eef3fa;
+      color: #2d5b9e;
+    }
+
+    .menu-text {
+      flex: 1;
+    }
+
+    .menu-text .title {
+      font-weight: 600;
+      color: #1a2b4c;
+      margin-bottom: 0.1rem;
+      font-size: 0.88rem;
+    }
+
+    .menu-text .desc {
+      font-size: 0.75rem;
+      color: #7a8aa0;
+      line-height: 1.4;
+    }
+
+    .detail-panel {
+      background: #f8fafd;
+      border-radius: 10px;
+      padding: 1.2rem 1.4rem;
+      border: 1px solid #e8ecf3;
+      border-left: 4px solid #2d5b9e;
+      display: none;
+    }
+
+    .detail-panel.show {
+      display: block;
+      animation: fadeSlide 0.15s ease;
+    }
+
+    .detail-panel h3 {
+      font-size: 0.98rem;
+      margin-bottom: 0.5rem;
+      color: #1a2b4c;
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-weight: 700;
+    }
+
+    .detail-panel h3 i {
+      color: #2d5b9e;
+    }
+
+    .detail-panel p {
+      font-size: 0.88rem;
+      color: #3d4d66;
+      line-height: 1.65;
+      margin-bottom: 0.9rem;
+    }
+
+    .case-box {
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 0.9rem 1.1rem;
+      border: 1px solid #e8ecf3;
+    }
+
+    .case-box strong {
+      color: #2d5b9e;
+      font-size: 0.73rem;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-bottom: 0.45rem;
+      font-weight: 700;
+    }
+
+    .case-box p {
+      margin: 0;
+      font-style: italic;
+      color: #5b6b83;
+      font-size: 0.85rem;
+      line-height: 1.6;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.9rem;
+    }
+
+    .input-card {
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 0.85rem 0.95rem;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #e0e6ef;
+      transition: border-color 0.15s, box-shadow 0.15s, background 0.15s;
+    }
+
+    .input-card:hover {
+      border-color: #b8c9dd;
+      background: #fafbfd;
+    }
+
+    .input-card:focus-within {
+      border-color: #2d5b9e;
+      box-shadow: 0 0 0 3px rgba(45, 91, 158, 0.08);
+    }
+
+    .input-card label {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #1a2b4c;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 0.4rem;
+      padding-bottom: 0.35rem;
+      border-bottom: 1px solid #eef1f6;
+      letter-spacing: -0.01em;
+    }
+
+    .input-card label i {
+      color: #2d5b9e;
+      font-size: 0.8rem;
+      width: 15px;
+      text-align: center;
+    }
+
+    .input-card textarea, .input-card input {
+      border: none;
+      padding: 0.15rem 0.1rem 0.15rem 0;
+      font-size: 0.88rem;
+      background: transparent;
+      resize: vertical;
+      outline: none;
+      color: #1a2b4c;
+      font-weight: 400;
+      width: 100%;
+      border-radius: 4px;
+      line-height: 1.5;
+    }
+
+    .input-card textarea {
+      min-height: 58px;
+      font-family: inherit;
+    }
+
+    .input-card input {
+      min-height: auto;
+    }
+
+    .input-card textarea::placeholder, .input-card input::placeholder {
+      color: #a8b5c7;
+      font-weight: 400;
+      font-size: 0.82rem;
+    }
+
+    .action-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .action-left {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      border: none;
+      padding: 0.6rem 1.3rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.82rem;
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .btn-sample {
+      background: #2d5b9e;
+      color: #ffffff;
+      border: 1px solid #2d5b9e;
+    }
+
+    .btn-sample:hover {
+      background: #244b82;
+      border-color: #244b82;
+    }
+
+    .btn-reset {
+      background: #ffffff;
+      color: #b91c1c;
+      border: 1px solid #fca5a5;
+    }
+
+    .btn-reset:hover {
+      background: #fef2f2;
+      border-color: #ef4444;
+    }
+
+    .btn:active {
+      transform: translateY(1px);
+    }
+
+    .sample-hint {
+      font-size: 0.78rem;
+      color: #7a8aa0;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .sample-hint i {
+      color: #a8b5c7;
+    }
+
+    .history-panel {
+      margin-top: 1.1rem;
+      background: #f8fafd;
+      border-radius: 10px;
+      padding: 1.1rem 1.3rem;
+      border: 1px solid #e8ecf3;
+    }
+
+    .history-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.8rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .history-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #3d4d66;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .history-title i {
+      color: #2d5b9e;
+    }
+
+    .btn-small {
+      border: none;
+      padding: 0.28rem 0.85rem;
+      border-radius: 6px;
+      font-size: 0.73rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.15s;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .btn-clear-history {
+      background: #ffffff;
+      color: #b91c1c;
+      border: 1px solid #fca5a5;
+    }
+
+    .btn-clear-history:hover {
+      background: #fef2f2;
+    }
+
+    .history-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+      max-height: 280px;
+      overflow-y: auto;
+      padding-right: 0.2rem;
+    }
+
+    .history-list::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    .history-list::-webkit-scrollbar-thumb {
+      background: #ccd6e3;
+      border-radius: 10px;
+    }
+
+    .history-item {
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 0.75rem 0.95rem;
+      border: 1px solid #e8ecf3;
+      border-left: 3px solid #3b7dd8;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 0.9rem;
+      transition: 0.15s;
+    }
+
+    .history-item:hover {
+      border-color: #ccd6e3;
+      box-shadow: 0 2px 8px rgba(0, 20, 50, 0.04);
+    }
+
+    .history-content {
+      flex: 1;
+      font-size: 0.8rem;
+      color: #5b6b83;
+      line-height: 1.5;
+    }
+
+    .history-content .h-time {
+      font-size: 0.68rem;
+      color: #a8b5c7;
+      margin-bottom: 0.22rem;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .history-content .h-preview {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      color: #3d4d66;
+    }
+
+    .history-restore {
+      background: #eef3fa;
+      border: none;
+      color: #2d5b9e;
+      padding: 0.35rem 0.85rem;
+      border-radius: 6px;
+      font-size: 0.73rem;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      transition: 0.15s;
+      flex-shrink: 0;
+    }
+
+    .history-restore:hover {
+      background: #2d5b9e;
+      color: #ffffff;
+    }
+
+    .history-empty {
+      text-align: center;
+      color: #a8b5c7;
+      font-size: 0.8rem;
+      padding: 1rem 0;
+      font-style: italic;
+    }
+
+    .generate-btn {
+      background: #1a2b4c;
+      border: none;
+      padding: 0.95rem 2rem;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.98rem;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.65rem;
+      width: 100%;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      letter-spacing: 0.2px;
+      box-shadow: 0 4px 12px rgba(26, 43, 76, 0.15);
+    }
+
+    .generate-btn:hover {
+      background: #243b63;
+      box-shadow: 0 6px 18px rgba(26, 43, 76, 0.22);
+    }
+
+    .generate-btn:active {
+      transform: translateY(1px);
+    }
+
+    .result-panel {
+      margin-top: 1.3rem;
+      background: #f8fafd;
+      border-radius: 10px;
+      padding: 1.3rem 1.5rem;
+      border: 1px solid #e8ecf3;
+      border-left: 4px solid #1a2b4c;
+    }
+
+    .result-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.9rem;
+    }
+
+    .result-header h2 {
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: #1a2b4c;
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+
+    .result-header h2 i {
+      color: #2d5b9e;
+    }
+
+    .copy-btn {
+      background: #ffffff;
+      border: 1px solid #ccd6e3;
+      color: #3d4d66;
+      padding: 0.4rem 1rem;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: 0.15s;
+      font-size: 0.78rem;
+    }
+
+    .copy-btn:hover {
+      background: #2d5b9e;
+      border-color: #2d5b9e;
+      color: #ffffff;
+    }
+
+    .result-text {
+      font-size: 0.95rem;
+      line-height: 1.8;
+      background: #ffffff;
+      padding: 1.3rem;
+      border-radius: 8px;
+      border: 1px solid #e8ecf3;
+      color: #1a2b4c;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-weight: 400;
+      letter-spacing: 0.1px;
+      min-height: 90px;
+      text-align: justify;
+    }
+
+    .placeholder-text {
+      color: #a8b5c7;
+      font-style: italic;
+    }
+
+    .hint-tip {
+      font-size: 0.75rem;
+      color: #a8b5c7;
+      margin-top: 0.45rem;
+      text-align: right;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .hint-tip i {
+      color: #ccd6e3;
+    }
+
+    [data-tooltip] {
+      position: relative;
+      cursor: help;
+    }
+
+    [data-tooltip]:before {
+      content: attr(data-tooltip);
+      position: absolute;
+      bottom: 130%;
+      left: 0;
+      background: #1a2b4c;
+      color: #e8ecf3;
+      padding: 0.5rem 0.85rem;
+      border-radius: 6px;
+      font-size: 0.72rem;
+      font-weight: 400;
+      width: 220px;
+      text-align: left;
+      line-height: 1.4;
+      box-shadow: 0 8px 20px rgba(0, 20, 50, 0.15);
+      opacity: 0;
+      pointer-events: none;
+      transition: 0.15s;
+      z-index: 200;
+      white-space: normal;
+    }
+
+    [data-tooltip]:hover:before {
+      opacity: 1;
+      bottom: 140%;
+    }
+
+    @media (max-width: 700px) {
+      body { padding: 1rem 0.8rem; }
+      .project-bar { padding: 1rem 1.2rem; }
+      .project-bar h1 { font-size: 1.05rem; }
+      .content { padding: 1.2rem; }
+      .section-body { padding: 1rem; }
+      .dropdown-menu { width: 300px; }
+      .form-grid { grid-template-columns: 1fr; }
+      .action-row { flex-direction: column; align-items: stretch; }
+      .action-left { flex-direction: column; }
+      .history-item { flex-direction: column; align-items: stretch; }
+      .history-restore { align-self: flex-end; }
+      .project-bar-right { width: 100%; justify-content: space-between; }
+    }
+  </style>
 </head>
 <body>
+<div class="app">
+  <div class="project-bar">
+    <div class="project-bar-left">
+      <div class="project-badge">
+        <i class="fas fa-chart-line"></i>
+      </div>
+      <div>
+        <h1>项目经历 · 出圈框架</h1>
+        <div class="project-meta">经历结构化剖析 → 结构化输入 → 一键生成经历描述</div>
+      </div>
+    </div>
+    <div class="project-bar-right">
+      <span class="status-dot"></span>
+      <span class="status-text">工作区就绪</span>
+      <button class="collapse-all-btn" id="collapseAllBtn" type="button">
+        <i class="fas fa-angles-down"></i> 一键展开
+      </button>
+    </div>
+  </div>
 
-    <header>
-        <h1>🚀 亚马逊运营全流程 SOP</h1>
-        <p>系统化知识库，点击下拉切换模块，点击标题透视详情</p>
-    </header>
+  <div class="content">
+    <!-- ========== 模块一 ========== -->
+    <div class="section-block collapsed" id="section-1">
+      <div class="section-header stage-1" data-section="1">
+        <div class="section-num num-1">1</div>
+        <div class="section-title-wrap">
+          <div class="section-title">经历结构化剖析</div>
+          <div class="section-sub">点击下拉框，选择模块，查看定义与案例</div>
+        </div>
+        <i class="fas fa-chevron-down collapse-arrow"></i>
+      </div>
+      <div class="section-body">
+        <div class="module-nav">
+          <div class="main-dropdown">
+            <button class="main-dropdown-btn" id="mainDropdownBtn" type="button">
+              <i class="fas fa-list-ul"></i> 选择框架模块
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="dropdown-menu" id="dropdownMenu">
+              <button class="menu-item" data-module="a" type="button">
+                <span class="menu-icon"><i class="fas fa-bullseye"></i></span>
+                <span class="menu-text">
+                  <span class="title">a · 定义</span>
+                  <span class="desc">项目经历想要出圈，如何描述它是关键中的关键，全看你怎么说</span>
+                </span>
+              </button>
+              <button class="menu-item" data-module="b" type="button">
+                <span class="menu-icon"><i class="fas fa-globe"></i></span>
+                <span class="menu-text">
+                  <span class="title">b · 交代背景</span>
+                  <span class="desc">项目开始的前提是什么？背景是什么？背景说不明白，就显得经历很突兀</span>
+                </span>
+              </button>
+              <button class="menu-item" data-module="c" type="button">
+                <span class="menu-icon"><i class="fas fa-mountain"></i></span>
+                <span class="menu-text">
+                  <span class="title">c · 突出难点</span>
+                  <span class="desc">一个项目经历是否有价值，就看它难度如何，难度不够，价值无法突出</span>
+                </span>
+              </button>
+              <button class="menu-item" data-module="d" type="button">
+                <span class="menu-icon"><i class="fas fa-tools"></i></span>
+                <span class="menu-text">
+                  <span class="title">d · 如何应对困难</span>
+                  <span class="desc">面对项目中的难点，如何解决困难</span>
+                </span>
+              </button>
+              <button class="menu-item" data-module="e" type="button">
+                <span class="menu-icon"><i class="fas fa-layer-group"></i></span>
+                <span class="menu-text">
+                  <span class="title">e · 结构框架</span>
+                  <span class="desc">背景＋角色＋难点＋解决方案＋果实</span>
+                </span>
+              </button>
+            </div>
+          </div>
+          <span style="font-size: 0.75rem; color: #a8b5c7;" data-tooltip="点击“选择框架模块”下拉框，选择任意模块即可查看详细解释和案例。新手也能快速理解出圈结构。">
+            <i class="fas fa-info-circle"></i> 详情透视
+          </span>
+        </div>
 
-    <div class="selector-container">
-        <select id="moduleSelector" onchange="renderContent()">
-            <option value="daily">模块1：亚马逊日常工作</option>
-            <option value="promotion">模块2：产品推广流程</option>
-            <option value="product">模块3：产品相关（Listing/定价）</option>
-            <option value="review">模块4：买家评价相关</option>
-            <option value="risk">模块5：亚马逊运营风险管理</option>
-        </select>
+        <div class="detail-panel" id="detailPanel">
+          <h3 id="detailTitle"><i class="fas fa-info-circle"></i> 模块详情</h3>
+          <p id="detailDesc"></p>
+          <div class="case-box">
+            <strong><i class="fas fa-lightbulb"></i> 案例参考</strong>
+            <p id="detailCase"></p>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="content-area" id="contentArea"></div>
+    <!-- ========== 模块二 ========== -->
+    <div class="section-block collapsed" id="section-2">
+      <div class="section-header stage-2" data-section="2">
+        <div class="section-num num-2">2</div>
+        <div class="section-title-wrap">
+          <div class="section-title">结构化输入</div>
+          <div class="section-sub">把项目信息填入对应卡片，越具体越出彩</div>
+        </div>
+        <i class="fas fa-chevron-down collapse-arrow"></i>
+      </div>
+      <div class="section-body">
+        <div class="action-row">
+          <div class="action-left">
+            <button class="btn btn-sample" id="sampleBtn" type="button">
+              <i class="fas fa-wand-magic-sparkles"></i> 填充示例
+            </button>
+            <button class="btn btn-reset" id="resetBtn" type="button">
+              <i class="fas fa-rotate-left"></i> 一键重置
+            </button>
+          </div>
+          <span class="sample-hint">
+            <i class="fas fa-clock-rotate-left"></i>
+            <span id="historyCount">0</span> 条历史记录
+          </span>
+        </div>
 
-    <script>
-        // ================= 数据结构：全部拆解为结构化微卡片 =================
-        const sopData = {
-            daily: {
-                title: "模块1：亚马逊日常工作",
-                sections: [
-                    {
-                        title: "1. 账号安全检查 / 邮件",
-                        cards: [
-                            { tag: "每日必做", tagClass: "tag-blue", text: "查看账号状况与业绩通知，检查是否存在<span class='highlight-red'>潜在风险</span>（如侵权、审核）。" },
-                            { tag: "沟通时效", tagClass: "tag-green", text: "对买家的邮件<span class='highlight'>及时作出回复</span>，保持24小时内的回复率。" }
-                        ]
-                    },
-                    {
-                        title: "2. 查看店铺状态",
-                        cards: [
-                            { tag: "状态检查", tagClass: "tag-blue", text: "检查产品在售状态 / 购物车是否丢失 / 是否被跟卖。" },
-                            { tag: "购物车丢失", tagClass: "tag-yellow", text: "立刻开Case问客服，回溯是否有提价行为。" },
-                            { tag: "被跟卖", tagClass: "tag-red", text: "立刻在品牌页面进行<span class='highlight-red'>投诉</span>，保护Listing所有权。" }
-                        ]
-                    },
-                    {
-                        title: "3. 检查Listing评分",
-                        cards: [
-                            { tag: "日常监控", tagClass: "tag-blue", text: "日常检查Listing的评分 / 评论数变化。" },
-                            { tag: "差评处理", tagClass: "tag-red", text: "及时优化Review差评点，联系客户解决痛点。" },
-                            { tag: "首页质量", tagClass: "tag-green", text: "保证评论首页质量，避免首页全是差评。" }
-                        ]
-                    },
-                    {
-                        title: "4. 新增Feedback检查",
-                        cards: [
-                            { tag: "低星关注", tagClass: "tag-yellow", text: "关注低于4星的Feedback。" },
-                            { tag: "删除操作", tagClass: "tag-blue", text: "尝试开<span class='highlight-blue'>删除Feedback的Case</span>，有一定概率成功删除（需符合亚马逊政策）。" }
-                        ]
-                    },
-                    {
-                        title: "5. 销量检查",
-                        cards: [
-                            { tag: "数据对比", tagClass: "tag-blue", text: "检查订单是否稳定，对比昨日/上周同期数据。" },
-                            { tag: "异常分析", tagClass: "tag-purple", text: "关注销量突增或骤降的原因（如竞品秒杀、自身断货等）。" }
-                        ]
-                    },
-                    {
-                        title: "6. 查看库存",
-                        cards: [
-                            { tag: "状态盘点", tagClass: "tag-blue", text: "日常检查库存状态（在售、接收、转运、在途、在产）。" },
-                            { tag: "库容申请", tagClass: "tag-yellow", text: "库存绩效方面，若库容不够，需后台申请扩容。" },
-                            { tag: "风险预警", tagClass: "tag-red", text: "注意<span class='highlight-red'>冗余库存</span>和<span class='highlight-red'>断货风险</span>，及时清理或补货。" }
-                        ]
-                    },
-                    {
-                        title: "7. 查看广告数据",
-                        cards: [
-                            { tag: "核心指标", tagClass: "tag-blue", text: "查看广告数据的曝光量、点击率、转化率、CPC、广告花费、ACOS以及关键词排名情况。" },
-                            { tag: "优化节奏", tagClass: "tag-green", text: "根据数据优化广告，建议保持<span class='highlight-green'>四天一次</span>的优化节奏（不宜频繁调整）。" }
-                        ]
-                    },
-                    {
-                        title: "8. 热浪数据查看（竞品/市场）",
-                        cards: [
-                            { tag: "新竞品", tagClass: "tag-yellow", text: "查看是否有新的链接冲上来（新竞品威胁）。" },
-                            { tag: "价格对标", tagClass: "tag-blue", text: "对标竞品价格上是否有进行调整。" },
-                            { tag: "排名追踪", tagClass: "tag-purple", text: "查看竞品的排名变化，分析其推广策略。" }
-                        ]
-                    }
-                ]
-            },
-            promotion: {
-                title: "模块2：产品推广流程",
-                sections: [
-                    {
-                        title: "准备阶段：产品调研与基础信息",
-                        cards: [
-                            { tag: "市场调研", tagClass: "tag-blue", text: "市场分析及竞品分析（推广方式&品牌），需求分析（主要消费群体及使用环境），产品痛点与卖点，寻找切入点（注意<span class='highlight'>扬长避短</span>）。" },
-                            { tag: "文案基础", tagClass: "tag-blue", text: "产品基础信息：Title, Bullet Point, Description, Search Terms（注意关键词的埋词）。" },
-                            { tag: "视觉优化", tagClass: "tag-green", text: "图片整理优化：橱窗图，EBC / A+页面图（突出消费者关注的、利于转化的产品卖点）。" },
-                            { tag: "视频制作", tagClass: "tag-yellow", text: "产品视频：通过客户经理或利用VC为产品添加视频（需供货给VC才可以添加视频）。" },
-                            { tag: "Q&A准备", tagClass: "tag-purple", text: "Q&A编写：准备4条有针对性的、利于转化的Question & Answer。" }
-                        ]
-                    },
-                    {
-                        title: "准备阶段：定价与变体",
-                        cards: [
-                            { tag: "定价策略", tagClass: "tag-red", text: "价格拟定：根据市场情况及竞争对手情况，拟定具有竞争力的价格（<span class='highlight-red'>低于市场平均价或主要竞争对手价格</span>）。" },
-                            { tag: "变体操作", tagClass: "tag-blue", text: "变体操作：新增颜色属性或升级版的类似产品，与旧ASIN合并变体（关联流量及review增加）。" }
-                        ]
-                    },
-                    {
-                        title: "第一周（FBA上架）：破零与积累",
-                        cards: [
-                            { tag: "Q&A & Wish", tagClass: "tag-blue", text: "添加Q&A & Wish List：利用买家账号添加Q&A，同时配合添加Wish List动作（以真实客户体验设置Q&A）。" },
-                            { tag: "刷单转化", tagClass: "tag-red", text: "刷单转化：用核心关键词，配合添加Q&A和Wish List动作，模拟真实买家行为刷单。" },
-                            { tag: "Reviewer", tagClass: "tag-green", text: "Reviewer邀评：寻找Top Reviewer或真实用户获取评价。" },
-                            { tag: "红人送测", tagClass: "tag-purple", text: "红人送测：YouTube、Facebook及其他社交论坛红人送测（送测同时提供折扣码）。" },
-                            { tag: "Giveaway", tagClass: "tag-yellow", text: "Giveaway：亚马逊平台Giveaway，并为未获奖者提供折扣码（非必要，可斟酌使用）。" },
-                            { tag: "早期计划", tagClass: "tag-blue", text: "Early Reviewer Program / Vine：参加亚马逊早期人计划（建议质量保证较好的产品使用，否则获取到的差评更影响转化）。" },
-                            { tag: "Coupon", tagClass: "tag-green", text: "设置Coupon：利用粉丝力量及其他途径上Coupon排行榜，增加新产品曝光（Only Clips, no redeem）。" },
-                            { tag: "Best Deal", tagClass: "tag-yellow", text: "提报Best Deal：FBA到仓上架就提报Best Deal，活动时间开始为两周后。" },
-                            { tag: "关联促销", tagClass: "tag-blue", text: "关联促销：利用旧有Listing做关联促销。" }
-                        ]
-                    },
-                    {
-                        title: "第二周：广告开启与流量放大",
-                        cards: [
-                            { tag: "LD提报", tagClass: "tag-purple", text: "提报Lightning Deal：可能获得LD推荐机会，提报下周（第三周）和BD后续的LD（LD提报时间有限，只有一周可以提报下周的）。" },
-                            { tag: "站内CPC", tagClass: "tag-blue", text: "站内CPC：开启自动广告和手动广告，出价比建议出价高，加大广告投入（倒三角的广告流量获取）。" },
-                            { tag: "AMS广告", tagClass: "tag-blue", text: "AMS广告：开启Product Display和Headline Search。" },
-                            { tag: "持续邀评", tagClass: "tag-green", text: "Reviewer邀评或刷单：继续reviewer邀评及刷单动作，结合广告关键词提高转化。" }
-                        ]
-                    },
-                    {
-                        title: "第三周：优化与冲刺",
-                        cards: [
-                            { tag: "广告优化", tagClass: "tag-blue", text: "广告调整优化：监测广告展示位置，根据上周广告数据对站内广告进行优化调整，增加否定词及长尾词。" },
-                            { tag: "Q&A维护", tagClass: "tag-yellow", text: "继续添加Q&A：此阶段可能会出现不利于转化的Q&A，必须得让这类Q&A不显示在首页。" },
-                            { tag: "LD开始", tagClass: "tag-purple", text: "Lightning Deal开始：理想情况下实现，需要把握好时机，配合帖子（Facebook/Deal站等）宣传及提前加购动作，把LD的展示位置提前。" },
-                            { tag: "站外Deal", tagClass: "tag-green", text: "提报站外Deal：Slickdeals等Deal站的促销提报，为下周开始的Best Deal预热。" }
-                        ]
-                    },
-                    {
-                        title: "第四周：收尾与维稳",
-                        cards: [
-                            { tag: "BD开始", tagClass: "tag-purple", text: "Best Deal开始：配合帖子（Facebook/Deal站等）宣传，可以的话配合刷单动作。" },
-                            { tag: "广告升词", tagClass: "tag-blue", text: "广告调整优化：升级转化效果好的长尾词（Phrase/Exact），添加否定关键词（此阶段可以适当提高关键词出价和广告预算，配合BD）。" },
-                            { tag: "中差评维护", tagClass: "tag-red", text: "中差评维护：主要针对可能出现的差评做维护动作，售后处理和新增好评（<span class='highlight-red'>差评不能上首页</span>）。" }
-                        ]
-                    },
-                    {
-                        title: "推广后期：持续监控",
-                        cards: [
-                            { tag: "市场监控", tagClass: "tag-blue", text: "市场分析：产品生命周期监控；市场需求趋势、价格趋势。" },
-                            { tag: "竞品监控", tagClass: "tag-purple", text: "竞品分析：竞争对手的推广方式分析，竞品的销售、排名。" },
-                            { tag: "广告控制", tagClass: "tag-green", text: "广告调整优化：根据前四周广告数据进行调整优化，开始注意控制ACoS。" }
-                        ]
-                    }
-                ]
-            },
-            product: {
-                title: "模块3：产品相关（Listing/定价）",
-                sections: [
-                    {
-                        title: "Title（标题）编写规范",
-                        cards: [
-                            { tag: "构成公式", tagClass: "tag-blue", text: "品牌 + 核心关键词1 + 特性词/功能词/属性词 + 核心关键词2 + 长尾词 + 其他。" },
-                            { tag: "字数要求", tagClass: "tag-green", text: "理想字数80 - 170个字符数之间，最好不要超过两行，也不能太短。" },
-                            { tag: "禁止项", tagClass: "tag-red", text: "不要添加无谓的促销信息，如Free Shipping, New Arrival, Hot Sale, Promotion等（平台禁止）。" },
-                            { tag: "大小写", tagClass: "tag-red", text: "不要全部用大写（平台禁止），建议每个单词首字母大写，介词（for, with, and, of）一律小写。" },
-                            { tag: "商标查询", tagClass: "tag-red", text: "禁止使用已在商标局注册的词语，使用非通用单词前先在商标局查询。" },
-                            { tag: "拼写检查", tagClass: "tag-yellow", text: "不要出现拼写错误。" }
-                        ]
-                    },
-                    {
-                        title: "Bullet Points（五点描述）",
-                        cards: [
-                            { tag: "核心提炼", tagClass: "tag-blue", text: "五行特性必须是产品卖点特性的精心提炼及总结，具有代表性并能击中消费者内心的内容（解决需求及痛点）。" },
-                            { tag: "结构要求", tagClass: "tag-green", text: "每点开头以两三个单词概括，再延展陈述；每个特性一般建议两至三行内容。" },
-                            { tag: "重要排序", tagClass: "tag-yellow", text: "最重要的特性建议落在第一、二和第五点。" },
-                            { tag: "关键词埋入", tagClass: "tag-blue", text: "适当融入未在标题中使用到的产品关键词。" }
-                        ]
-                    },
-                    {
-                        title: "Description（产品描述）",
-                        cards: [
-                            { tag: "补充信息", tagClass: "tag-blue", text: "解答消费者在图片、标题以及五行特性中未能获取的更详细的产品信息。" },
-                            { tag: "竞品参考", tagClass: "tag-green", text: "参考多个竞争对手以及同类产品review中消费者的表述。" },
-                            { tag: "场景丰富", tagClass: "tag-green", text: "结合产品特性及使用场景，丰富文案内容。" },
-                            { tag: "关键词补充", tagClass: "tag-blue", text: "适当融入未在标题、五行特性中使用到的产品关键词。" },
-                            { tag: "排版代码", tagClass: "tag-yellow", text: "注意整齐、段落有序，适当使用HTML简单代码。" }
-                        ]
-                    },
-                    {
-                        title: "关键词（Search Terms）",
-                        cards: [
-                            { tag: "获取渠道", tagClass: "tag-blue", text: "从常识中整理，平台上收集，客户Review收集，关键词工具收集，广告报表中获取。" },
-                            { tag: "应用原则", tagClass: "tag-green", text: "按照相关性强弱应用于Title，Bullet Points，Description和Search Terms。" },
-                            { tag: "埋词位置", tagClass: "tag-blue", text: "适当在bullet points，description，Q&A，Review等位置加入更多关键词。" },
-                            { tag: "250字符", tagClass: "tag-red", text: "Search Terms为250个字符，产品发布初期直接把250个字符全部填写：不要包含与产品不相关的词语，不要包含品牌名或其他产品识别符，不要重复使用Title/Bullet Point中出现过的词语。" }
-                        ]
-                    },
-                    {
-                        title: "图片处理（主图/副图/A+）",
-                        cards: [
-                            { tag: "主图规范", tagClass: "tag-red", text: "必须为所售产品的真实产品图片，白色背景且不带文字/水印/插图/Logo/边框；产品需占图片空间85%以上，像素1000*1000，jpg格式；要呈立体三维效果，可增加一定的PS效果。" },
-                            { tag: "副图要求", tagClass: "tag-blue", text: "最好采用图片和文字结合方式，展示产品卖点特性；多角度卖点展示图；实物对比图；应用场景图，提高真实度；产品内核拆解图或生产工艺流程图。" },
-                            { tag: "A+页面", tagClass: "tag-green", text: "采用图片+文字描述方式，避免与主图、副图相同。" }
-                        ]
-                    },
-                    {
-                        title: "定价策略",
-                        cards: [
-                            { tag: "市场对标", tagClass: "tag-blue", text: "参考同类产品定价，根据市场情况及竞争对手情况，拟定具有竞争力的价格。" },
-                            { tag: "利润率", tagClass: "tag-yellow", text: "常规利润率30%，最低利润率不低于15%。" },
-                            { tag: "营销设定", tagClass: "tag-green", text: "根据具体营销计划设定。" },
-                            { tag: "折扣偏好", tagClass: "tag-purple", text: "价格设置：不妨设置MSRP价格以及Sale Price，满足消费者对折扣的偏好。" }
-                        ]
-                    }
-                ]
-            },
-            review: {
-                title: "模块4：买家评价相关",
-                sections: [
-                    {
-                        title: "Review获取方式（合规篇）",
-                        cards: [
-                            { tag: "售后邮件", tagClass: "tag-blue", text: "自主行为，方式不同成本不同（手动批量发送，ERP或第三方软件）。注意频率，频繁发送会使得买家厌烦甚至向平台投诉。" },
-                            { tag: "售后卡片", tagClass: "tag-green", text: "自主行为，方式不同成本不同，暂无风险。" },
-                            { tag: "早期计划", tagClass: "tag-yellow", text: "Early Reviewer Program：由亚马逊邀请买家留评。参与资格：SKU为单位，Review数量少于5，单价高于15.00美元，注册了美国品牌并成功在亚马逊备案。费用60美元（一次性支付）。风险：由亚马逊邀请买家评论，卖家无法控制质量。" },
-                            { tag: "Vine计划", tagClass: "tag-purple", text: "Amazon Vine Voice Program：亚马逊邀请那些可信度最高的reviewer。需通过VC参与，需供货给VC。费用1000-5000美金（类目不同费用不同）。风险：由亚马逊邀请Vine Voice评论，卖家无法控制质量。" },
-                            { tag: "Top Reviewer", tagClass: "tag-red", text: "Top Reviewer或其他买家邀请：通过社交媒体或邮件联系相关买家或Top Reviewer发出测评邀请，以第三方渠道退款或折扣等方式作为报酬，以换取好评。风险：亚马逊平台禁止行为，需特别谨慎。" }
-                        ]
-                    },
-                    {
-                        title: "买家评论相关政策（合规红线）",
-                        cards: [
-                            { tag: "买家资格", tagClass: "tag-blue", text: "买家评论资格：买家必须在过去12个月内通过有效的信用卡或者借记卡消费至少50美元（促销折扣不计算在内），并成为Prime会员。" },
-                            { tag: "VP评论", tagClass: "tag-green", text: "VP评论（Verified Purchase Review）：由亚马逊确认的在Amazon购买了并且没有以很低的折扣获得产品后提交的买家评论。" },
-                            { tag: "直评", tagClass: "tag-yellow", text: "直评（非VP评论）：亚马逊无法确认是否通过真实购买了产品的，或者以超过30%折扣买下该产品的买家留下的评论。" }
-                        ]
-                    },
-                    {
-                        title: "违反买家评论政策的行为（严禁触碰）",
-                        cards: [
-                            { tag: "自我评价", tagClass: "tag-red", text: "卖家对自己的商品或竞争对手的商品发布评论。" },
-                            { tag: "利益交换", tagClass: "tag-red", text: "卖家为第三方提供经济报酬、折扣、免费商品或其他补偿来换取对自己的商品或竞争对手的商品的评论。" },
-                            { tag: "售后补偿", tagClass: "tag-red", text: "卖家在买家编写评论之后提供退款或补偿（包括通过非亚马逊付款方式的补偿）。" },
-                            { tag: "第三方服务", tagClass: "tag-red", text: "卖家使用与评论相关的可提供免费或折扣商品的第三方服务。" },
-                            { tag: "家人员工", tagClass: "tag-red", text: "卖家的家人或员工为卖家的商品或竞争对手的商品发布评论。" },
-                            { tag: "删改评论", tagClass: "tag-red", text: "卖家让评论者更改或移除评论。" },
-                            { tag: "好评转移", tagClass: "tag-red", text: "卖家将差评转发给自己或其他反馈机制，而将好评发送给亚马逊。" },
-                            { tag: "变体操控", tagClass: "tag-red", text: "卖家在商品之间创建变体关系，旨在通过聚集评论操控评论和提升商品的星级。" },
-                            { tag: "包装评论", tagClass: "tag-red", text: "卖家提供亚马逊好评或物质奖励，以换取对商品包装或装运箱的评论。" },
-                            { tag: "买家账户", tagClass: "tag-red", text: "卖家使用买家账户为自己的商品或竞争对手的商品编写或更改评论。" }
-                        ]
-                    },
-                    {
-                        title: "违反买家评论政策的处罚（高压线）",
-                        cards: [
-                            { tag: "封店扣款", tagClass: "tag-red", text: "立即并永久撤销卖家在亚马逊上的销售权限，同时扣留资金。" },
-                            { tag: "移除评论", tagClass: "tag-red", text: "移除商品的所有评论，并阻止商品日后收到评论或评级。" },
-                            { tag: "永久下架", tagClass: "tag-red", text: "从亚马逊永久下架商品。" },
-                            { tag: "法律追责", tagClass: "tag-red", text: "对卖家采取法律行动，包括诉讼和移交民事和刑事执法机构。" }
-                        ]
-                    }
-                ]
-            },
-            risk: {
-                title: "模块5：亚马逊运营风险管理",
-                sections: [
-                    {
-                        title: "1. 账号安全风险（店铺生死线）",
-                        cards: [
-                            { tag: "关联风险", tagClass: "tag-red", text: "严禁同一套资料（营业执照、法人身份证、信用卡、收款账号）在多个店铺使用；严禁在同一IP/电脑上登录多个店铺（建议使用VPS或超级浏览器）。" },
-                            { tag: "KYC审核", tagClass: "tag-red", text: "欧洲站等触发KYC时，务必保证提交的账单、营业执照、法人信息真实且一致，切勿PS造假。" },
-                            { tag: "绩效通知", tagClass: "tag-red", text: "每天必看，任何小红旗警告（如ODR超标、侵权投诉）必须在72小时内处理，否则可能被封店。" },
-                            { tag: "健康度", tagClass: "tag-yellow", text: "关注订单缺陷率（ODR<1%）、取消率（<2.5%）、迟发率（<4%）。" }
-                        ]
-                    },
-                    {
-                        title: "2. 知识产权风险（侵权封店）",
-                        cards: [
-                            { tag: "商标侵权", tagClass: "tag-red", text: "在Listing标题、描述、图片中，严禁使用未经授权的品牌名称或Logo（包括在Search Terms中埋词）。" },
-                            { tag: "专利侵权", tagClass: "tag-red", text: "上架前务必排查产品外观专利和发明专利（尤其美国站），避免售卖仿品。" },
-                            { tag: "版权侵权", tagClass: "tag-red", text: "严禁盗用竞品的图片、视频、A+文案；卡通形象、动漫IP未经授权不能使用。" },
-                            { tag: "应对策略", tagClass: "tag-blue", text: "遇到侵权投诉，立即下架相关链接，联系投诉方和解，并准备发票、授权书等材料进行申诉。" }
-                        ]
-                    },
-                    {
-                        title: "3. 产品合规与安全风险",
-                        cards: [
-                            { tag: "产品认证", tagClass: "tag-yellow", text: "确保产品符合目标市场的认证要求（如美国站UL、FCC、FDA；欧洲站CE、RoHS、REACH）。" },
-                            { tag: "标签合规", tagClass: "tag-yellow", text: "产品包装必须包含必要的警告语、制造商信息、原产地标识等。" },
-                            { tag: "危险品审核", tagClass: "tag-red", text: "带电池、液体、粉末等产品，必须提前做危险品审核（SDS报告），否则FBA无法入库。" },
-                            { tag: "产品责任险", tagClass: "tag-blue", text: "高客单价或高风险类目（如母婴、电子）建议购买产品责任险，防范因产品缺陷导致的巨额索赔。" }
-                        ]
-                    },
-                    {
-                        title: "4. 物流与库存风险",
-                        cards: [
-                            { tag: "断货风险", tagClass: "tag-red", text: "旺季或供应链不稳定时，需提前备货，避免Listing权重暴跌。" },
-                            { tag: "仓储超量", tagClass: "tag-red", text: "长期滞销的库存会产生高额仓储费，需及时通过Outlet、Coupon或站外Deal清理。" },
-                            { tag: "入仓延误", tagClass: "tag-yellow", text: "关注亚马逊仓库的接收时效，避免因上架延迟导致断货。" },
-                            { tag: "物流索赔", tagClass: "tag-blue", text: "对于FBA丢失或损坏的库存，及时开Case向亚马逊索赔。" }
-                        ]
-                    },
-                    {
-                        title: "5. 财务与税务风险",
-                        cards: [
-                            { tag: "税务合规", tagClass: "tag-blue", text: "欧洲站必须注册VAT并按时申报；美国站需关注各州销售税（Sales Tax）政策。" },
-                            { tag: "资金安全", tagClass: "tag-red", text: "避免使用违规收款工具，防止资金被冻结。" },
-                            { tag: "汇率风险", tagClass: "tag-yellow", text: "关注汇率波动，合理设置结汇时间。" },
-                            { tag: "广告超支", tagClass: "tag-yellow", text: "设置合理的广告预算和竞价，避免ACOS失控导致亏损。" }
-                        ]
-                    }
-                ]
-            }
+        <div class="form-grid">
+          <div class="input-card" data-tooltip="项目背景：背景是什么？项目开始的前提是什么？">
+            <label><i class="fas fa-circle-info"></i> 项目背景</label>
+            <textarea id="background" placeholder="例：后台管理系统操作繁琐，数据经常出错"></textarea>
+          </div>
+          <div class="input-card" data-tooltip="人员角色：你在项目中承担什么角色？">
+            <label><i class="fas fa-user-tie"></i> 人员角色</label>
+            <textarea id="role" placeholder="例：负责后台模块开发"></textarea>
+          </div>
+          <div class="input-card" data-tooltip="遇到的难点或者问题：技术、协作、时间等方面的挑战">
+            <label><i class="fas fa-triangle-exclamation"></i> 遇到的难点</label>
+            <textarea id="difficulty" placeholder="例：老代码混乱，改一个功能影响多个页面"></textarea>
+          </div>
+          <div class="input-card" data-tooltip="解决方案：如何分析、选型、落地？体现你的思考">
+            <label><i class="fas fa-wrench"></i> 解决方案</label>
+            <textarea id="solution" placeholder="例：抽离公共组件，统一数据校验，加操作日志"></textarea>
+          </div>
+          <div class="input-card" data-tooltip="最终的成效：量化结果，越具体越好">
+            <label><i class="fas fa-chart-line"></i> 最终成效</label>
+            <textarea id="result" placeholder="例：操作效率提升50%，数据错误率降为0"></textarea>
+          </div>
+          <div class="input-card" data-tooltip="团队人数：项目团队一共多少人？">
+            <label><i class="fas fa-users"></i> 团队人数</label>
+            <input type="text" id="teamSize" placeholder="例：3人">
+          </div>
+          <div class="input-card" data-tooltip="对接人员：主要对接哪些角色或部门？例如采购、研发、产品、运维等">
+            <label><i class="fas fa-handshake"></i> 对接人员</label>
+            <input type="text" id="stakeholders" placeholder="例：对接产品、测试">
+          </div>
+        </div>
+
+        <div class="history-panel" id="historyPanel">
+          <div class="history-header">
+            <div class="history-title">
+              <i class="fas fa-clock-rotate-left"></i> 历史记录（点击“恢复”可重新填入并生成）
+            </div>
+            <div class="history-actions">
+              <button class="btn-small btn-clear-history" id="clearHistoryBtn" type="button">
+                <i class="fas fa-trash-can"></i> 清空
+              </button>
+            </div>
+          </div>
+          <div class="history-list" id="historyList">
+            <div class="history-empty">暂无历史记录，填写信息后点击“一键重置”会自动保存。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== 模块三 ========== -->
+    <div class="section-block collapsed" id="section-3">
+      <div class="section-header stage-3" data-section="3">
+        <div class="section-num num-3">3</div>
+        <div class="section-title-wrap">
+          <div class="section-title">一键生成经历描述</div>
+          <div class="section-sub">自动按“背景＋角色＋难点＋解决方案＋果实”结构生成</div>
+        </div>
+        <i class="fas fa-chevron-down collapse-arrow"></i>
+      </div>
+      <div class="section-body">
+        <button class="generate-btn" id="generateBtn" type="button">
+          <i class="fas fa-magic"></i> 一键生成 · 出圈项目描述
+        </button>
+
+        <div class="result-panel">
+          <div class="result-header">
+            <h2><i class="fas fa-star"></i> 你的项目经历（出圈版）</h2>
+            <button class="copy-btn" id="copyBtn" type="button"><i class="fas fa-copy"></i> 复制</button>
+          </div>
+          <div class="result-text" id="resultText">
+            <span class="placeholder-text">填写“结构化输入”中的信息，点击“一键生成”即可获得简洁、出彩的项目经历描述。</span>
+          </div>
+        </div>
+        <div class="hint-tip">
+          <i class="fas fa-lightbulb"></i> 结构：背景 + 角色 + 难点 + 解决方案 + 果实
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // ===== 模块折叠/展开 =====
+    const sectionHeaders = document.querySelectorAll('.section-header');
+    sectionHeaders.forEach(header => {
+      header.addEventListener('click', () => {
+        const sectionId = header.dataset.section;
+        const section = document.getElementById('section-' + sectionId);
+        if (section) {
+          section.classList.toggle('collapsed');
+        }
+      });
+    });
+
+    // ===== 一键收起 / 一键展开 =====
+    const collapseAllBtn = document.getElementById('collapseAllBtn');
+    let allCollapsed = true; // 默认全部折叠
+
+    // 更新按钮文字为「一键展开」（因为当前是折叠状态）
+    collapseAllBtn.innerHTML = '<i class="fas fa-angles-down"></i> 一键展开';
+
+    collapseAllBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      allCollapsed = !allCollapsed;
+      const sections = document.querySelectorAll('.section-block');
+      sections.forEach(section => {
+        if (allCollapsed) {
+          section.classList.add('collapsed');
+        } else {
+          section.classList.remove('collapsed');
+        }
+      });
+      if (allCollapsed) {
+        collapseAllBtn.innerHTML = '<i class="fas fa-angles-down"></i> 一键展开';
+      } else {
+        collapseAllBtn.innerHTML = '<i class="fas fa-angles-up"></i> 一键收起';
+      }
+    });
+
+    // ===== 模块数据 =====
+    const modules = {
+      a: {
+        title: 'a · 定义',
+        desc: '项目经历想要出圈，如何描述它是关键中的关键，全看你怎么说。核心是结果导向、动词精准、数据支撑，用高度凝练的语言把项目价值“翻译”成面试官能秒懂的亮点。',
+        case: '“负责XX后台优化，通过抽离公共组件，将操作效率提升50%，数据错误率降为0。” —— 一句话说清角色、动作、量化结果。'
+      },
+      b: {
+        title: 'b · 交代背景',
+        desc: '项目开始的前提是什么？背景是什么？背景说不明白，就显得经历很突兀。需要交代业务痛点、市场机会、技术债务或战略目标，让面试官理解“为什么做这个项目”。',
+        case: '“原后台系统操作步骤多，数据靠手动录入，经常出错，每月因此产生大量返工。” —— 背景有痛点、有场景。'
+      },
+      c: {
+        title: 'c · 突出难点',
+        desc: '一个项目经历是否有价值，就看它难度如何，难度不够，价值无法突出。难点可以来自技术瓶颈、资源限制、跨团队协作、时间压力等。描述时最好有对比：原来多难，现在多好。',
+        case: '“老代码没有注释和文档，改一个功能可能影响多个页面，牵一发动全身。” —— 体现了维护成本和复杂性。'
+      },
+      d: {
+        title: 'd · 如何应对困难',
+        desc: '面对项目中的难点，如何解决困难。展现你的思考路径、技术选型、协作方式和决策依据。把“解决方案”结构化，体现主动性和逻辑。',
+        case: '“先梳理核心流程，抽离出5个公共组件，统一数据校验规则，并加上操作日志方便追溯。” —— 有分析、有步骤、有落地。'
+      },
+      e: {
+        title: 'e · 结构框架',
+        desc: '背景＋角色＋难点＋解决方案＋果实。这是最经典的黄金叙事结构，让面试官像听故事一样理解你的贡献。每一环都要精简、有力。',
+        case: '“（背景）后台操作繁琐易错；（角色）负责后台模块开发；（难点）老代码混乱影响面大；（方案）抽离公共组件+统一校验；（果实）效率提升50%，错误率降为0。” —— 结构清晰，层层递进。'
+      }
+    };
+
+    const mainBtn = document.getElementById('mainDropdownBtn');
+    const menu = document.getElementById('dropdownMenu');
+    const menuItems = document.querySelectorAll('.menu-item');
+    const detailPanel = document.getElementById('detailPanel');
+    const detailTitle = document.getElementById('detailTitle');
+    const detailDesc = document.getElementById('detailDesc');
+    const detailCase = document.getElementById('detailCase');
+
+    mainBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      menu.classList.toggle('show');
+      mainBtn.classList.toggle('active');
+    });
+
+    menuItems.forEach(item => {
+      item.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const moduleKey = item.dataset.module;
+        const data = modules[moduleKey];
+        if (!data) return;
+
+        menuItems.forEach(mi => mi.classList.remove('active'));
+        item.classList.add('active');
+
+        detailTitle.innerHTML = '<i class="fas fa-info-circle"></i> ' + data.title;
+        detailDesc.innerText = data.desc;
+        detailCase.innerText = data.case;
+        detailPanel.classList.add('show');
+
+        menu.classList.remove('show');
+        mainBtn.classList.remove('active');
+      });
+    });
+
+    document.addEventListener('click', () => {
+      menu.classList.remove('show');
+      mainBtn.classList.remove('active');
+    });
+    menu.addEventListener('click', (e) => e.stopPropagation());
+
+    const fieldIds = ['background', 'role', 'difficulty', 'solution', 'result', 'teamSize', 'stakeholders'];
+
+    function getFormData() {
+      const data = {};
+      fieldIds.forEach(id => {
+        const el = document.getElementById(id);
+        data[id] = el ? el.value.trim() : '';
+      });
+      return data;
+    }
+
+    function hasContent(data) {
+      return fieldIds.some(id => data[id] && data[id].length > 0);
+    }
+
+    function fillForm(data) {
+      fieldIds.forEach(id => {
+        const el = document.getElementById(id);
+        if (el && data[id] !== undefined) {
+          el.value = data[id];
+        }
+      });
+    }
+
+    function clearForm() {
+      fieldIds.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.value = '';
+      });
+    }
+
+    let memoryHistory = [];
+
+    function loadHistory() {
+      if (memoryHistory.length > 0) return memoryHistory;
+      try {
+        const raw = localStorage.getItem('project_exp_history_v14');
+        if (raw) {
+          const parsed = JSON.parse(raw);
+          if (Array.isArray(parsed)) {
+            memoryHistory = parsed;
+            return memoryHistory;
+          }
+        }
+      } catch (e) {}
+      return [];
+    }
+
+    function saveHistory(history) {
+      memoryHistory = history;
+      try {
+        localStorage.setItem('project_exp_history_v14', JSON.stringify(history));
+      } catch (e) {}
+    }
+
+    function isSameRecord(data1, data2) {
+      return fieldIds.every(id => (data1[id] || '') === (data2[id] || ''));
+    }
+
+    function addHistory(data) {
+      const history = loadHistory();
+      const existingIndex = history.findIndex(item => isSameRecord(item.data, data));
+
+      if (existingIndex !== -1) {
+        const existing = history[existingIndex];
+        existing.time = new Date().toLocaleString('zh-CN', { hour12: false });
+        history.splice(existingIndex, 1);
+        history.unshift(existing);
+      } else {
+        const record = {
+          id: 'rec_' + Date.now() + '_' + Math.random().toString(36).slice(2, 8),
+          time: new Date().toLocaleString('zh-CN', { hour12: false }),
+          data: JSON.parse(JSON.stringify(data))
         };
+        history.unshift(record);
+      }
 
-        // 渲染函数
-        function renderContent() {
-            const selector = document.getElementById('moduleSelector');
-            const selectedModule = selector.value;
-            const data = sopData[selectedModule];
-            const container = document.getElementById('contentArea');
+      if (history.length > 20) history.length = 20;
+      saveHistory(history);
+      renderHistory();
+    }
 
-            let html = `<h2 class="module-title">${data.title}</h2>`;
+    function clearAllHistory() {
+      if (confirm('确定要清空所有历史记录吗？此操作不可恢复。')) {
+        saveHistory([]);
+        renderHistory();
+      }
+    }
 
-            data.sections.forEach((section) => {
-                html += `
-                    <div class="accordion-item">
-                        <div class="accordion-header" onclick="toggleAccordion(this)">
-                            <span>${section.title}</span>
-                            <span class="icon">▼</span>
-                        </div>
-                        <div class="accordion-content">
-                            ${section.cards.map(card => `
-                                <div class="micro-card">
-                                    <span class="card-tag ${card.tagClass}">${card.tag}</span>
-                                    <div class="card-text">${card.text}</div>
-                                </div>
-                            `).join('')}
-                        </div>
-                    </div>
-                `;
-            });
+    const historyList = document.getElementById('historyList');
+    const historyCount = document.getElementById('historyCount');
 
-            container.innerHTML = html;
+    function renderHistory() {
+      const history = loadHistory();
+      historyCount.innerText = history.length;
 
-            // 默认展开第一个
-            const firstHeader = container.querySelector('.accordion-header');
-            if (firstHeader) {
-                toggleAccordion(firstHeader);
-            }
+      if (history.length === 0) {
+        historyList.innerHTML = '<div class="history-empty">暂无历史记录，填写信息后点击“一键重置”会自动保存。</div>';
+        return;
+      }
+
+      historyList.innerHTML = history.map(item => {
+        const d = item.data;
+        const previewParts = [];
+        if (d.background) previewParts.push('背景：' + d.background);
+        if (d.role) previewParts.push('角色：' + d.role);
+        if (d.difficulty) previewParts.push('难点：' + d.difficulty);
+        const preview = previewParts.length > 0 ? previewParts.join('｜') : '（空记录）';
+
+        return '<div class="history-item">' +
+          '<div class="history-content">' +
+            '<div class="h-time"><i class="far fa-clock"></i> ' + item.time + '</div>' +
+            '<div class="h-preview">' + escapeHtml(preview) + '</div>' +
+          '</div>' +
+          '<button class="history-restore" data-id="' + item.id + '" type="button">' +
+            '<i class="fas fa-rotate-right"></i> 恢复' +
+          '</button>' +
+        '</div>';
+      }).join('');
+
+      historyList.querySelectorAll('.history-restore').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const id = btn.dataset.id;
+          const history = loadHistory();
+          const record = history.find(h => h.id === id);
+          if (record) {
+            fillForm(record.data);
+            generateDescription();
+            document.querySelector('.form-grid').scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        });
+      });
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return str.replace(/[&<>"]/g, function(m) {
+        if (m === '&') return '&amp;';
+        if (m === '<') return '&lt;';
+        if (m === '>') return '&gt;';
+        if (m === '"') return '&quot;';
+        return m;
+      });
+    }
+
+    const resetBtn = document.getElementById('resetBtn');
+    resetBtn.addEventListener('click', () => {
+      const currentData = getFormData();
+      if (hasContent(currentData)) {
+        addHistory(currentData);
+      }
+      clearForm();
+      document.getElementById('resultText').innerHTML = '<span class="placeholder-text">填写“结构化输入”中的信息，点击“一键生成”即可获得简洁、出彩的项目经历描述。</span>';
+      resetBtn.innerHTML = '<i class="fas fa-check"></i> 已重置';
+      setTimeout(() => {
+        resetBtn.innerHTML = '<i class="fas fa-rotate-left"></i> 一键重置';
+      }, 1200);
+    });
+
+    const sampleBtn = document.getElementById('sampleBtn');
+    const sampleData = {
+      background: '后台管理系统操作步骤繁琐，数据靠手动录入，经常出错，每月因此产生大量返工。',
+      role: '负责后台模块开发，参与需求梳理与功能设计。',
+      difficulty: '老代码没有注释和文档，改一个功能可能影响多个页面，牵一发动全身。',
+      solution: '先梳理核心流程，抽离出5个公共组件，统一数据校验规则，并加上操作日志方便追溯。',
+      result: '操作效率提升50%，数据错误率降为0，用户反馈明显变好。',
+      teamSize: '3人',
+      stakeholders: '对接产品、测试'
+    };
+
+    sampleBtn.addEventListener('click', () => {
+      const currentData = getFormData();
+      if (hasContent(currentData)) {
+        addHistory(currentData);
+      }
+      fillForm(sampleData);
+      generateDescription();
+
+      sampleBtn.innerHTML = '<i class="fas fa-check"></i> 已填充';
+      setTimeout(() => {
+        sampleBtn.innerHTML = '<i class="fas fa-wand-magic-sparkles"></i> 填充示例';
+      }, 1500);
+    });
+
+    const generateBtn = document.getElementById('generateBtn');
+    const resultDiv = document.getElementById('resultText');
+    const copyBtn = document.getElementById('copyBtn');
+
+    function getVal(id) {
+      const el = document.getElementById(id);
+      return el ? el.value.trim() : '';
+    }
+
+    function generateDescription() {
+      const background = getVal('background');
+      const role = getVal('role');
+      const difficulty = getVal('difficulty');
+      const solution = getVal('solution');
+      const result = getVal('result');
+      const teamSize = getVal('teamSize');
+      const stakeholders = getVal('stakeholders');
+
+      if (!background && !role && !difficulty && !solution && !result && !teamSize && !stakeholders) {
+        resultDiv.innerHTML = '<span class="placeholder-text">请至少填写一项信息，生成专属项目经历。</span>';
+        return;
+      }
+
+      let sentences = [];
+
+      let first = '';
+      if (background) {
+        first += background;
+        if (!/[。！？]$/.test(first)) first += '。';
+      }
+      let roleInfo = '';
+      if (role) {
+        const roleText = (role.startsWith('负责') || role.startsWith('担任') || role.startsWith('主导') || role.startsWith('参与')) ? role : '负责' + role;
+        roleInfo = '我' + roleText;
+        if (teamSize) roleInfo += '，团队共' + teamSize;
+        if (stakeholders) roleInfo += '，主要对接' + stakeholders;
+        if (!/[。！？]$/.test(roleInfo)) roleInfo += '。';
+      } else {
+        if (teamSize || stakeholders) {
+          roleInfo = '项目中';
+          if (teamSize) roleInfo += '团队共' + teamSize;
+          if (stakeholders) roleInfo += (teamSize ? '，' : '') + '主要对接' + stakeholders;
+          roleInfo += '。';
         }
+      }
+      if (first || roleInfo) sentences.push(first + roleInfo);
 
-        // 手风琴折叠逻辑
-        function toggleAccordion(element) {
-            const content = element.nextElementSibling;
-            
-            if (content.style.display === "block") {
-                content.style.display = "none";
-                element.classList.remove('active');
-            } else {
-                content.style.display = "block";
-                element.classList.add('active');
-            }
-        }
+      let second = '';
+      if (difficulty) {
+        second += '过程中遇到的主要挑战是：' + difficulty;
+        if (!/[。！？]$/.test(second)) second += '。';
+      }
+      if (solution) {
+        const solText = (solution.startsWith('通过') || solution.startsWith('采用') || solution.startsWith('先') || solution.startsWith('我')) ? solution : '我' + solution;
+        second += '为此，' + solText;
+        if (!/[。！？]$/.test(second)) second += '。';
+      }
+      if (second) sentences.push(second);
 
-        // 页面加载完成后初始化
-        window.onload = renderContent;
+      if (result) {
+        let third = '最终，' + result;
+        if (!/[。！？]$/.test(third)) third += '。';
+        sentences.push(third);
+      }
 
-    </script>
+      if (sentences.length === 0) {
+        resultDiv.innerHTML = '<span class="placeholder-text">请至少填写一项信息，生成专属项目经历。</span>';
+        return;
+      }
+
+      resultDiv.innerText = sentences.join('');
+    }
+
+    generateBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      generateDescription();
+    });
+
+    copyBtn.addEventListener('click', () => {
+      const text = resultDiv.innerText;
+      if (!text || text.includes('填写“结构化输入”') || text.includes('请至少填写一项')) {
+        alert('暂无可复制的内容，请先生成描述。');
+        return;
+      }
+      navigator.clipboard.writeText(text).then(() => {
+        const originalHTML = copyBtn.innerHTML;
+        copyBtn.innerHTML = '<i class="fas fa-check"></i> 已复制';
+        setTimeout(() => {
+          copyBtn.innerHTML = originalHTML;
+        }, 1500);
+      }).catch(() => {
+        alert('复制失败，请手动复制。');
+      });
+    });
+
+    document.getElementById('clearHistoryBtn').addEventListener('click', clearAllHistory);
+
+    renderHistory();
+  });
+</script>
 </body>
 </html>
